@@ -9,24 +9,24 @@
 </head>
 <body>
     <!-- ============================================= -->
-    <!-- ==  HEADER :) == -->
+    <!-- == INICIO: HEADER FINAL Y CORREGIDO == -->
     <!-- ============================================= -->
     <header class="site-header" id="site-header">
         <div class="header-container">
-            <!-- logo a la izquierda -->
+            <!-- Logo a la izquierda -->
             <a href="index.html" class="header-logo-link">
                 <h1>Serviucis</h1>
             </a>
 
-            <!-- controles a la derecha -->
+            <!-- Controles a la derecha -->
             <div class="header-controls">
-                <!-- icono de búsqueda -->
-                <a href="busqueda.html" class="header-search-icon" aria-label="Buscar"></a>
+                <!-- CORRECCIÓN: Solo el icono de búsqueda -->
+                <a href="#" class="header-search-icon" aria-label="Buscar">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
                     </svg>
                 </a>
-                <!-- boton de Menu -->
+                <!-- Botón de Menú -->
                 <button class="menu-toggle-button" id="menu-toggle">
                     <span class="menu-toggle-arrow"></span>
                     Menu
@@ -34,7 +34,7 @@
             </div>
         </div>
         
-        <!-- menu desplegable -->
+        <!-- Menú Desplegable con el contenido de tu proyecto -->
         <div class="nav-submenu" id="nav-submenu">
         <div class="mobile-menu-header">
             <button class="menu-close-button" id="menu-close">
@@ -73,21 +73,11 @@
         </div>
     </header>
     <!-- =============================== -->
-    <!-- == FIN HEADER == -->
+    <!-- == FIN: NUEVO HEADER == -->
     <!-- =============================== -->
     
     <main>
-
-        <section class="about-content">
-            <div style="max-width: 980px; margin: 0 auto; padding: 20px;">
-                <h1 class="section-heading">Búsqueda en el Sitio</h1>
-                
-                <script async src="https://cse.google.com/cse.js?cx=21defd409565242d9"></script>
-                <div class="gcse-search"></div>
-
-            </div>
-        </section>
-        <!-- el contenido principal -->
+        <!-- El contenido principal de tu página no se toca -->
         <section class="hero">
             <div class="carousel">
                 <div class="carousel-slide active"><img src="img/Gemini_Generated_Image_1632ea1632ea1632.png" alt="Imagen de instalaciones 1"></div>
@@ -123,11 +113,11 @@
     </footer>
     
 <script>
-    // --- SCRIPT PARA HEADER Y MENu ---
+    // --- SCRIPT FINAL Y CORREGIDO PARA HEADER Y MENÚ ---
     document.addEventListener('DOMContentLoaded', function() {
-        const siteHeader = document.getElementById("site-header");
+        const siteHeader = document.getElementById("site-header"); // Or your correct selector
         const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close'); // Boton de cierre
+        const menuClose = document.getElementById('menu-close'); // Botón de cierre
         const submenu = document.getElementById('nav-submenu');
 
         function openMenu() {
@@ -156,14 +146,14 @@
             });
         }
         
-        // back para el boton de cierre 
+        // CORRECCIÓN: Lógica para el botón de cierre explícito
         if (menuClose) {
             menuClose.addEventListener('click', function() {
                 closeMenu();
             });
         }
 
-        // back para cerrar el menu haciendo clic fuera (solo para escritorio)
+        // Lógica para cerrar el menú haciendo clic fuera (solo para escritorio)
         document.addEventListener('click', function(event) {
             if (window.innerWidth > 768 && siteHeader.classList.contains('submenu-is-open')) {
                 if (submenu && !submenu.contains(event.target) && !menuToggle.contains(event.target)) {
@@ -174,7 +164,7 @@
     });
 
 
-    
+    // --- SCRIPTS ORIGINALES CONSERVADOS ---
     // Carrusel
     const slides = document.querySelectorAll('.carousel-slide, .carousel-bg-slide');
     let currentSlide = 0;
@@ -185,7 +175,7 @@
         slides[currentSlide].classList.add('active');
     }
     if (slides.length > 0) {
-        // asegura que solo el primer slide de cada carrusel este activo al inicio
+        // Asegura que solo el primer slide de cada carrusel esté activo al inicio
         document.querySelector('.carousel .carousel-slide').classList.add('active');
         if(document.querySelector('.background-carousel .carousel-bg-slide')) {
              document.querySelector('.background-carousel .carousel-bg-slide').classList.add('active');
@@ -193,7 +183,7 @@
         setInterval(showNextSlide, 5000);
     }
 
-    // aapa de Apartado
+    // Mapa de Apartadó
     const verMapaBtn = document.getElementById('verMapaBtn');
     if (verMapaBtn) {
         verMapaBtn.addEventListener('click', function() {
@@ -201,7 +191,7 @@
         });
     }
 
-    // back del FAQ
+    // Lógica del FAQ
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
