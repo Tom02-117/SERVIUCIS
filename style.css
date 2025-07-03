@@ -875,8 +875,8 @@ button:focus,
 }
 
 .menu-close-button {
-    background: none;
-    border: none;
+    background-color: #0071e3;
+    border-radius: 10px;
     font-size: 1rem;
     font-weight: 700;
     color: var(--gov-text-dark);
