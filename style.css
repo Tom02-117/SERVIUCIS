@@ -87,7 +87,7 @@ img {
     display: block;
 }
 .menu-toggle-button {
-    background: black !important;
+    background: transparent !important;
     color: var(--gov-white) !important;
     border: 3px solid transparent;
     font-size: 1rem;
