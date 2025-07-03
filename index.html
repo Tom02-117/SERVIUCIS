@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviucis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo unidCH.png" type="image/png">
+</head>
+<body>
+    <!-- ============================================= -->
+    <!-- == INICIO: HEADER FINAL Y CORREGIDO == -->
+    <!-- ============================================= -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <!-- Logo a la izquierda -->
+            <a href="index.html" class="header-logo-link">
+                <h1>Serviucis</h1>
+            </a>
+
+            <!-- Controles a la derecha -->
+            <div class="header-controls">
+                <!-- CORRECCIÓN: Solo el icono de búsqueda -->
+                <a href="#" class="header-search-icon" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                    </svg>
+                </a>
+                <!-- Botón de Menú -->
+                <button class="menu-toggle-button" id="menu-toggle">
+                    <span class="menu-toggle-arrow"></span>
+                    Menu
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú Desplegable con el contenido de tu proyecto -->
+        <div class="nav-submenu" id="nav-submenu">
+        <div class="mobile-menu-header">
+            <button class="menu-close-button" id="menu-close">
+                <span class="menu-close-icon">×</span>
+                Cerrar
+            </button>
+        </div>
+            <div class="nav-submenu-content">
+                <div class="submenu-column">
+                    <h3 class="submenu-main-heading">SERVIUCIS</h3>
+                    <ul>
+                        <li><a href="submenu/quienesSomos.html" class="submenu-link">QUIÉNES SOMOS</a></li>
+                        <li><a href="submenu/mision.html" class="submenu-link">Misión</a></li>
+                        <li><a href="submenu/vision.html" class="submenu-link">Visión</a></li>
+                        <li><a href="submenu/valores.html" class="submenu-link">Valores</a></li>
+                        <li><a href="submenu/compromiso.html" class="submenu-link">Compromiso</a></li>
+                        <li><a href="submenu/nuestroOrigen.html" class="submenu-link">Nuestro Origen</a></li>
+                        <li><a href="submenu/pilaresEstrategia.html" class="submenu-link">Pilares de la Estrategia</a></li>
+                    </ul>
+                </div>
+                <div class="submenu-column">
+                    <h3 class="submenu-main-heading">Sedes e Información</h3>
+                    <ul>
+                        <li><a href="#sede-rionegro" class="submenu-link">UCI Valle de San Nicolás Rionegro</a></li>
+                        <li><a href="#sede-apartado" class="submenu-link">Uci Santa María del Darién Apartadó</a></li>
+                        <li><a href="submenu/extra/serviciosYCalidad.html" class="submenu-link">Serviucis y la Calidad</a></li>
+                        <li><a href="submenu/extra/serviciosYAcademia.html" class="submenu-link">Serviucis y la Academia</a></li>
+                        <li><a href="submenu/extra/educacionParaPacientes.html" class="submenu-link">Educación para Pacientes</a></li>
+                        <li><a href="submenu/secondary/preguntasFrecuentes.html" class="submenu-link">Preguntas Frecuentes</a></li>
+                        <li><a href="submenu/secondary/Buzon.html" class="submenu-link">Buzón (PQRSD)</a></li>
+                        <li><a href="submenu/secondary/economico.html" class="submenu-link">Asuntos Económicos</a></li>
+                        <li><a href="submenu/secondary/politicas.html" class="submenu-link">Políticas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- =============================== -->
+    <!-- == FIN: NUEVO HEADER == -->
+    <!-- =============================== -->
+    
+    <main>
+        <!-- El contenido principal de tu página no se toca -->
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-slide active"><img src="img/Gemini_Generated_Image_1632ea1632ea1632.png" alt="Imagen de instalaciones 1"></div>
+                <div class="carousel-slide"><img src="img/Gemini_Generated_Image_rto2hlrto2hlrto2.png" alt="Imagen de personal médico 2"></div>
+                <div class="carousel-slide"><img src="img/Gemini_Generated_Image_vrlwfhvrlwfhvrlw.png" alt="Imagen de instalaciones 3"></div>
+            </div>
+            <div class="hero-content fade-in">
+                <h1 class="hero-headline slide-up">Serviucis</h1>
+                <h2 class="hero-subhead slide-up">Cuidado Crítico con Calidad Humana</h2>
+                <div class="hero-cta slide-up">
+                    <a href="#sedes" class="hero-cta-link">Nuestras Sedes ></a>
+                    <a href="#contacto" class="hero-cta-link">Contáctanos ></a>
+                </div>
+            </div>
+        </section>
+        
+        <h2 class="section-heading" id="sedes">Nuestras Sedes</h2>
+        <div class="product-grid">
+            <div class="product-tile fade-in" id="sede-rionegro"><h3 class="product-tile-title">UCI Valle de San Nicolás</h3><h4 class="product-tile-subtitle">Rionegro, Antioquia</h4><p>Carrera 55A # 35-229 Interior 130</p><div class="product-tile-cta"><a href="submenu/quienesSomos.html" class="product-tile-cta-link">Más información ></a><a href="#mapa-rionegro" class="product-tile-cta-link">Ver en mapa ></a></div><div class="product-tile-image"><img src="img/Gemini_Generated_Image_5els6g5els6g5els.png" alt="Sede Serviucis Rionegro"></div></div>
+            <div class="product-tile fade-in" id="sede-apartado"><h3 class="product-tile-title">UCI Santa María del Darién</h3><h4 class="product-tile-subtitle">Apartadó, Antioquia</h4><p>Cra. 98 #106-28, Apartadó, Antioquia</p><div class="product-tile-cta"><a href="submenu/quienesSomos.html" class="product-tile-cta-link">Más información ></a><a href="#mapa-apartado-container" class="product-tile-cta-link">Ver en mapa ></a></div><div class="product-tile-image"><img src="img/Gemini_Generated_Image_hk6wjmhk6wjmhk6w.png" alt="Sede Serviucis Apartadó"></div></div>
+            <div class="product-tile product-tile-large fade-in"><h3 class="product-tile-title">Compromiso a todo Nivel Económico</h3><h4 class="product-tile-subtitle">Cuidando de todos</h4><p>Nuestro compromiso social nos impulsa a garantizar que el nivel económico no sea una barrera para acceder a un cuidado de salud digno y de calidad. Atendemos a todos con la misma dedicación.</p><div class="product-tile-cta"><a href="submenu/compromiso.html" class="product-tile-cta-link">Conoce nuestro compromiso ></a></div><div class="product-tile-image"><img src="img/Gemini_Generated_Image_bxr0cdbxr0cdbxr0.png" alt="Imagen que representa el compromiso social"></div></div>
+            <div class="product-tile fade-in" id="calidad"><h3 class="product-tile-title">Serviucis y la Calidad</h3><h4 class="product-tile-subtitle">Estándares superiores</h4><p>Implementamos un sistema de gestión de calidad riguroso para asegurar la excelencia en cada uno de nuestros procesos y servicios.</p><div class="product-tile-cta"><a href="submenu/extra/serviciosYCalidad.html" class="product-tile-cta-link">Ver políticas de calidad ></a></div></div>
+            <div class="product-tile fade-in" id="academia"><h3 class="product-tile-title">Serviucis y la Academia</h3><h4 class="product-tile-subtitle">Formando el futuro</h4><p>Contribuimos a la formación de nuevos profesionales de la salud a través de convenios docencia-servicio con prestigiosas universidades.</p><div class="product-tile-cta"><a href="submenu/extra/serviciosYAcademia.html" class="product-tile-cta-link">Conoce nuestros convenios ></a></div></div>
+            <div class="product-tile fade-in"><div class="tab-header">Aseguradoras Aliadas</div><div class="tab-content"><a href="https://www.saviasaludeps.com/sitioweb/" class="btn-link" target="_blank">Savia Salud EPS</a><a href="https://promedanips.co/" class="btn-link" target="_blank">Promedan IPS</a><a href="https://www.epssura.com/" class="btn-link" target="_blank">EPS Sura</a><a href="https://www.coomeva.com.co/galeria/2433/coomeva-eps/" class="btn-link" target="_blank">Coomeva EPS S.A</a><a href="https://nuevaeps.com.co/" class="btn-link" target="_blank">Nueva EPS S.A</a><a href="#" class="btn-link" target="_blank">Ver más</a></div></div>
+        </div>
+        <section class="map-section" id="mapas"><h2 class="section-heading">Encuéntranos</h2><div id="mapa-rionegro" class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.6984393072872!2d-75.37237263049494!3d6.158370932980211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e469f09985b03cf%3A0x87293bc41236ce36!2sSERVIUCIS%20UCI%20Valle%20de%20San%20Nicol%C3%A1s!5e0!3m2!1ses-419!2sco!4v1750865276919!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="sede-container" id="mapa-apartado-container"><h2>Sede Apartadó, Antioquia</h2><p>Dirección: Cra. 98 #106-28</p><button id="verMapaBtn" class="btn">Ver en mapa</button><div class="mapa-google" id="mapaGoogle"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1397.2681763911348!2d-76.62943063497335!3d7.887618866177048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e500d6f7ab0a13f%3A0x1fc21f52f1e345ec!2sHospital%20Regional%20De%20Urab%C3%A1!5e0!3m2!1ses-419!2sco!4v1751060334865!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
+        </section>
+    </main>
+    
+    <footer class="footer" id="contacto">
+        <div class="footer-container"><div class="footer-notes"><p>Serviucis S.A.S. - Expertos en el cuidado crítico del paciente.</p></div><div class="footer-links"><div class="footer-links-column"><h3>Contáctenos</h3><ul><li><a href="mailto:atencionalusuario@serviucis.com">Correo: atencionalusuario@serviucis.com</a></li><li>Línea de atención única: (604) 5661619</li></ul></div><div class="footer-links-column"><h3>Síguenos</h3><ul><li><a href="https://www.facebook.com/Serviucis/" target="_blank"><img src="img/20673.png" alt="Facebook"> Facebook</a></li><li><a href="https://www.instagram.com/serviucissas/" target="_blank"><img src="img/1a179ff9617a9bf05426d9170b164557.webp" alt="Instagram"> Instagram</a></li></ul></div><div class="footer-links-column footer-supersalud"><h3>Vigilado por la Superintendencia Nacional de Salud</h3><br><a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener"><img src="img/logo-vigilado-supersalud-web.png" alt="Logo Supersalud" style="max-width: 140px; height: auto; display: block; margin: 1em auto 0;"></a></div></div><div class="footer-legal"><div class="footer-legal-item">© 2025 Serviucis S.A.S. Todos los derechos reservados.</div><div class="footer-legal-item"><a href="#">Política de Privacidad</a></div><div class="footer-legal-item"><a href="#">Términos de Uso</a></div></div></div>
+    </footer>
+    
+<script>
+    // --- SCRIPT FINAL Y CORREGIDO PARA HEADER Y MENÚ ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const siteHeader = document.getElementById("site-header"); // Or your correct selector
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close'); // Botón de cierre
+        const submenu = document.getElementById('nav-submenu');
+
+        function openMenu() {
+            if (siteHeader) {
+                siteHeader.classList.add('submenu-is-open');
+                document.body.classList.add('body-no-scroll');
+            }
+        }
+
+        function closeMenu() {
+            if (siteHeader) {
+                siteHeader.classList.remove('submenu-is-open');
+                document.body.classList.remove('body-no-scroll');
+            }
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function(event) {
+                event.stopPropagation();
+                // Si el menú ya está abierto, el mismo botón lo cierra. Si no, lo abre.
+                if (siteHeader.classList.contains('submenu-is-open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+        }
+        
+        // CORRECCIÓN: Lógica para el botón de cierre explícito
+        if (menuClose) {
+            menuClose.addEventListener('click', function() {
+                closeMenu();
+            });
+        }
+
+        // Lógica para cerrar el menú haciendo clic fuera (solo para escritorio)
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth > 768 && siteHeader.classList.contains('submenu-is-open')) {
+                if (submenu && !submenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    closeMenu();
+                }
+            }
+        });
+    });
+
+
+    // --- SCRIPTS ORIGINALES CONSERVADOS ---
+    // Carrusel
+    const slides = document.querySelectorAll('.carousel-slide, .carousel-bg-slide');
+    let currentSlide = 0;
+    function showNextSlide() {
+        if (slides.length === 0) return;
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    if (slides.length > 0) {
+        // Asegura que solo el primer slide de cada carrusel esté activo al inicio
+        document.querySelector('.carousel .carousel-slide').classList.add('active');
+        if(document.querySelector('.background-carousel .carousel-bg-slide')) {
+             document.querySelector('.background-carousel .carousel-bg-slide').classList.add('active');
+        }
+        setInterval(showNextSlide, 5000);
+    }
+
+    // Mapa de Apartadó
+    const verMapaBtn = document.getElementById('verMapaBtn');
+    if (verMapaBtn) {
+        verMapaBtn.addEventListener('click', function() {
+          document.getElementById('mapa-apartado-container').classList.toggle('ampliado');
+        });
+    }
+
+    // Lógica del FAQ
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+</script>
+</body>
+</html>
