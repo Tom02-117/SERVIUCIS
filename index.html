@@ -9,24 +9,24 @@
 </head>
 <body>
     <!-- ============================================= -->
-    <!-- == INICIO: HEADER FINAL Y CORREGIDO == -->
+    <!-- ==  HEADER :) == -->
     <!-- ============================================= -->
     <header class="site-header" id="site-header">
         <div class="header-container">
-            <!-- Logo a la izquierda -->
+            <!-- logo a la izquierda -->
             <a href="index.html" class="header-logo-link">
                 <h1>Serviucis</h1>
             </a>
 
-            <!-- Controles a la derecha -->
+            <!-- controles a la derecha -->
             <div class="header-controls">
-                <!-- CORRECCIÓN: Solo el icono de búsqueda -->
+                <!-- icono de búsqueda -->
                 <a href="#" class="header-search-icon" aria-label="Buscar">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
                     </svg>
                 </a>
-                <!-- Botón de Menú -->
+                <!-- boton de Menu -->
                 <button class="menu-toggle-button" id="menu-toggle">
                     <span class="menu-toggle-arrow"></span>
                     Menu
@@ -34,7 +34,7 @@
             </div>
         </div>
         
-        <!-- Menú Desplegable con el contenido de tu proyecto -->
+        <!-- menu desplegable -->
         <div class="nav-submenu" id="nav-submenu">
         <div class="mobile-menu-header">
             <button class="menu-close-button" id="menu-close">
@@ -73,11 +73,11 @@
         </div>
     </header>
     <!-- =============================== -->
-    <!-- == FIN: NUEVO HEADER == -->
+    <!-- == FIN HEADER == -->
     <!-- =============================== -->
     
     <main>
-        <!-- El contenido principal de tu página no se toca -->
+        <!-- el contenido principal -->
         <section class="hero">
             <div class="carousel">
                 <div class="carousel-slide active"><img src="img/Gemini_Generated_Image_1632ea1632ea1632.png" alt="Imagen de instalaciones 1"></div>
@@ -113,11 +113,11 @@
     </footer>
     
 <script>
-    // --- SCRIPT FINAL Y CORREGIDO PARA HEADER Y MENÚ ---
+    // --- SCRIPT PARA HEADER Y MENu ---
     document.addEventListener('DOMContentLoaded', function() {
-        const siteHeader = document.getElementById("site-header"); // Or your correct selector
+        const siteHeader = document.getElementById("site-header");
         const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close'); // Botón de cierre
+        const menuClose = document.getElementById('menu-close'); // Boton de cierre
         const submenu = document.getElementById('nav-submenu');
 
         function openMenu() {
@@ -146,14 +146,14 @@
             });
         }
         
-        // CORRECCIÓN: Lógica para el botón de cierre explícito
+        // back para el boton de cierre 
         if (menuClose) {
             menuClose.addEventListener('click', function() {
                 closeMenu();
             });
         }
 
-        // Lógica para cerrar el menú haciendo clic fuera (solo para escritorio)
+        // back para cerrar el menu haciendo clic fuera (solo para escritorio)
         document.addEventListener('click', function(event) {
             if (window.innerWidth > 768 && siteHeader.classList.contains('submenu-is-open')) {
                 if (submenu && !submenu.contains(event.target) && !menuToggle.contains(event.target)) {
@@ -164,7 +164,7 @@
     });
 
 
-    // --- SCRIPTS ORIGINALES CONSERVADOS ---
+    
     // Carrusel
     const slides = document.querySelectorAll('.carousel-slide, .carousel-bg-slide');
     let currentSlide = 0;
@@ -175,7 +175,7 @@
         slides[currentSlide].classList.add('active');
     }
     if (slides.length > 0) {
-        // Asegura que solo el primer slide de cada carrusel esté activo al inicio
+        // asegura que solo el primer slide de cada carrusel este activo al inicio
         document.querySelector('.carousel .carousel-slide').classList.add('active');
         if(document.querySelector('.background-carousel .carousel-bg-slide')) {
              document.querySelector('.background-carousel .carousel-bg-slide').classList.add('active');
@@ -183,7 +183,7 @@
         setInterval(showNextSlide, 5000);
     }
 
-    // Mapa de Apartadó
+    // aapa de Apartado
     const verMapaBtn = document.getElementById('verMapaBtn');
     if (verMapaBtn) {
         verMapaBtn.addEventListener('click', function() {
@@ -191,7 +191,7 @@
         });
     }
 
-    // Lógica del FAQ
+    // back del FAQ
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
