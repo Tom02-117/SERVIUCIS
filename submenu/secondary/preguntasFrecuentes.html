@@ -193,23 +193,18 @@
     
     <script src="../../js/main.js"></script>
     <script>
-        // --- back del FAQ  ---
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-       
-        const faqItem = button.parentElement;
+    // back del FAQ
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-        
-        document.querySelectorAll('.faq-item.open').forEach(openItem => {
-            if (openItem !== faqItem) {
-                openItem.classList.remove('open');
+            const faqItem = button.closest('.faq-item');
+            if (faqItem) {
+                faqItem.classList.toggle('open');
             }
         });
-
-        
-        faqItem.classList.toggle('open');
     });
-});
     </script>
 </body>
 </html>
