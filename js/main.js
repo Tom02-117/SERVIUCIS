@@ -76,10 +76,19 @@ if (verMapaBtn) {
     });
 }
 
-// back del FAQ
+// Lógica del FAQ
 document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const faqItem = button.parentElement;
-        faqItem.classList.toggle('open');
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Cierra otros FAQ si quieres solo uno abierto a la vez:
+        // document.querySelectorAll('.faq-item.open').forEach(item => {
+        //     if(item !== button.parentElement) item.classList.remove('open');
+        // });
+        const faqItem = button.closest('.faq-item');
+        if (faqItem) {
+            faqItem.classList.toggle('open');
+        }
     });
 });
+
