@@ -1,18 +1,4 @@
 // --- SCRIPT  ---
-
-// back del FAQ
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const faqItem = button.closest('.faq-item');
-        if (faqItem) {
-            faqItem.classList.toggle('open');
-        }
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const siteHeader = document.getElementById("site-header"); 
     const menuToggle = document.getElementById('menu-toggle');
@@ -90,16 +76,21 @@ if (verMapaBtn) {
     });
 }
 
-// back del FAQ
+// --- back del FAQ  ---
 document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
+    button.addEventListener('click', () => {
+       
+        const faqItem = button.parentElement;
 
-        const faqItem = button.closest('.faq-item');
-        if (faqItem) {
-            faqItem.classList.toggle('open');
-        }
+        
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+            if (openItem !== faqItem) {
+                openItem.classList.remove('open');
+            }
+        });
+
+        
+        faqItem.classList.toggle('open');
     });
 });
 
