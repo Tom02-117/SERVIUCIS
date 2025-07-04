@@ -607,12 +607,17 @@ button:focus,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0; /* Anula el margen del botón */
+  margin: 0; 
+}
+
+.faq-question span:first-child {
+    flex-grow: 1; 
 }
 
 .faq-arrow {
   font-size: 1.2em;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
+  margin-left: 15px;
 }
 
 .faq-item.open .faq-arrow {
