@@ -634,7 +634,7 @@ button:focus,
 }
 
 .faq-item.open .faq-answer {
-  max-height: 400px; /* Aumentado para textos largos */
+  max-height: 400px; 
   padding: 20px;
 }
 
@@ -645,6 +645,103 @@ button:focus,
     margin-bottom: 0;
 }
 
+.main-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+.action-card {
+    background-color: var(--color-light-gray);
+    border-radius: var(--radius-global);
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.action-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    color: var(--gov-blue);
+}
+.action-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.action-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Sección de Aseguradoras Aliadas (index.html) */
+.partners-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.section-subheading {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.partner-logo {
+    font-weight: 600;
+    color: #777;
+    filter: grayscale(1);
+    opacity: 0.8;
+}
+
+/* Grid para Misión y Visión (quienesSomos.html) */
+.mission-vision-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Sección de Valores (quienesSomos.html) */
+.values-section {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+.values-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.value-item {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    border-radius: var(--radius-global);
+}
+.value-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--gov-blue);
+}
+.value-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Grid de una sola columna (quienesSomos.html) */
+.single-column {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+}
 
 /* =========================
    6. FOOTER
