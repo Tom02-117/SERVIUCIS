@@ -9,24 +9,16 @@
 </head>
 <body>
     <!-- ============================================= -->
-    <!-- HEADER -->
+    <!-- == HEADER == -->
     <!-- ============================================= -->
     <header class="site-header" id="site-header">
         <div class="header-container">
-            <!-- Logo a la izquierda -->
             <a href="index.html" class="header-logo-link">
                 <h1>Serviucis</h1>
             </a>
 
-            <!-- Controles a la derecha -->
+
             <div class="header-controls">
-                
-                <a href="#" class="header-search-icon" aria-label="Buscar">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-                    </svg>
-                </a>
-                <!-- botón de Menu -->
                 <button class="menu-toggle-button" id="menu-toggle">
                     <span class="menu-toggle-arrow"></span>
                     Menu
@@ -34,7 +26,6 @@
             </div>
         </div>
         
-        <!-- Menu Desplegable con el contenido de tu proyecto -->
         <div class="nav-submenu" id="nav-submenu">
         <div class="mobile-menu-header">
             <button class="menu-close-button" id="menu-close">
@@ -42,37 +33,49 @@
                 Cerrar
             </button>
         </div>
-            <div class="nav-submenu-content">
+            <div class="nav-submenu-content three-columns">
                 <div class="submenu-column">
-                    <h3 class="submenu-main-heading">SERVIUCIS</h3>
+                    <h3 class="submenu-main-heading">Nosotros</h3>
                     <ul>
-                        <li><a href="submenu/quienesSomos.html" class="submenu-link">QUIÉNES SOMOS</a></li>
-                        <li><a href="submenu/pilaresEstrategia.html" class="submenu-link">Pilares de la Estrategia</a></li>
+                        <li><a href="submenu/quienesSomos.html" class="submenu-link">Quiénes Somos</a></li>
+                        <li><a href="submenu/quienesSomos.html#mision-vision" class="submenu-link">Misión y Visión</a></li>
+                        <li><a href="submenu/quienesSomos.html#valores" class="submenu-link">Nuestros Valores</a></li>
+                        <li><a href="submenu/quienesSomos.html#origen-compromiso" class="submenu-link">Nuestro Origen</a></li>
+                        <li><a href="submenu/pilaresEstrategia.html" class="submenu-link">Pilares y Estrategia</a></li>
                     </ul>
                 </div>
+                
                 <div class="submenu-column">
-                    <h3 class="submenu-main-heading">Sedes e Información</h3>
+                    <h3 class="submenu-main-heading">Pacientes y Familiares</h3>
                     <ul>
-                        <li><a href="submenu/sedeR.html" class="submenu-link">UCI Valle de San Nicolás Rionegro</a></li>
-                        <li><a href="submenu/sedeA.html" class="submenu-link">UCI Santa María del Darién Apartadó</a></li>
-                        <li><a href="submenu/extra/serviciosYCalidad.html" class="submenu-link">Serviucis y la Calidad</a></li>
-                        <li><a href="submenu/extra/serviciosYAcademia.html" class="submenu-link">Serviucis y la Academia</a></li>
+                        <li><a href="submenu/sedeR.html" class="submenu-link">Nuestras Sede Rionegro</a></li>
+                        <li><a href="submenu/sedeA.html" class="submenu-link">Nuestras Sede Apartadó</a></li>
+                        <li><a href="submenu/secondary/preguntasFrecuentes.html" class="submenu-link">Preguntas Frecuentes (FAQ)</a></li>
+                        <li><a href="#aseguradoras" class="submenu-link">Aseguradoras Aliadas</a></li>
                         <li><a href="submenu/extra/educacionParaPacientes.html" class="submenu-link">Educación para Pacientes</a></li>
-                        <li><a href="submenu/secondary/preguntasFrecuentes.html" class="submenu-link">Preguntas Frecuentes</a></li>
-                        <li><a href="submenu/secondary/Buzon.html" class="submenu-link">Buzón (PQRSD)</a></li>
+                    </ul>
+                </div>
+
+                <div class="submenu-column">
+                    <h3 class="submenu-main-heading">Información Corporativa</h3>
+                    <ul>
+                        <li><a href="submenu/secondary/politicas.html" class="submenu-link">Políticas de la Empresa</a></li>
+                        <li><a href="submenu/extra/serviciosYCalidad.html" class="submenu-link">Calidad y Academia</a></li>
+                        <li><a href="submenu/secondary/Buzon.html" class="submenu-link">Buzón de Sugerencias (PQRSD)</a></li>
+                        <li><a href="#contacto" class="submenu-link">Contáctanos</a></li>
                         <li><a href="submenu/secondary/economico.html" class="submenu-link">Asuntos Económicos</a></li>
-                        <li><a href="submenu/secondary/politicas.html" class="submenu-link">Políticas</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
     </header>
     <!-- =============================== -->
-    <!-- ==fin HEADER == -->
+    <!-- == HEADER == -->
     <!-- =============================== -->
     
     <main>
-        <!--contenido principal -->
         <section class="hero">
             <div class="carousel">
                 <div class="carousel-slide active"><img src="img/20250703_144330.jpg" alt="Imagen de instalaciones 1"></div>
@@ -90,22 +93,18 @@
         </section>
 
 
-        <!-- ACCIONES PRINCIPALES -->
         <section class="main-actions">
             <div class="action-card">
-                <img src="img/icon-hospital.svg" alt="Icono de Sede" class="action-icon">
                 <h3>Encuentra tu Sede</h3>
                 <p>Localiza nuestras unidades de cuidado intensivo en Rionegro y Apartadó.</p>
                 <a href="#sedes" class="btn">Ver Sedes</a>
             </div>
             <div class="action-card">
-                <img src="img/icon-heart.svg" alt="Icono de Corazón" class="action-icon">
                 <h3>Pacientes y Familiares</h3>
                 <p>Información útil, horarios de visita y respuestas a tus preguntas más frecuentes.</p>
                 <a href="submenu/secondary/preguntasFrecuentes.html" class="btn">Ir a FAQ</a>
             </div>
             <div class="action-card">
-                <img src="img/icon-team.svg" alt="Icono de Equipo" class="action-icon">
                 <h3>Nuestra Esencia</h3>
                 <p>Conoce nuestra historia, misión y los valores que guían nuestro trabajo diario.</p>
                 <a href="submenu/quienesSomos.html" class="btn">Quiénes Somos</a>
@@ -122,7 +121,7 @@
                     <a href="#mapa-rionegro" class="product-tile-cta-link">Ver en mapa ></a>
                 </div>
                 <div class="product-tile-image">
-                    <img src="img/Gemini_Generated_Image_5els6g5els6g5els.png" alt="Sede Serviucis Rionegro">
+                    <img src="img/20250703_144330.jpg" alt="Sede Serviucis Rionegro">
                 </div>
             </div>
             <div class="product-tile fade-in" id="sede-apartado">
@@ -133,7 +132,7 @@
                     <a href="#mapa-apartado-container" class="product-tile-cta-link">Ver en mapa ></a>
                 </div>
                 <div class="product-tile-image">
-                    <img src="img/Gemini_Generated_Image_hk6wjmhk6wjmhk6w.png" alt="Sede Serviucis Apartadó">
+                    <img src="img/sede_ap.png" alt="Sede Serviucis Apartadó">
                 </div>
             </div>
         </div>
@@ -142,12 +141,11 @@
             <h2 class="section-heading">Aseguradoras Aliadas</h2>
             <p class="section-subheading">Trabajamos con las principales aseguradoras del país para brindarte la mejor cobertura.</p>
             <div class="partners-grid">
-                <div class="partner-logo"><img src="img/savia-salud-logo.png" alt="Savia Salud EPS"></div>
-                <div class="partner-logo"><img src="img/promedan-logo.png" alt="Promedan IPS"></div>
-                <div class="partner-logo"><img src="img/eps-sura-logo.png" alt="EPS Sura"></div>
-                <div class="partner-logo"><img src="img/coomeva-logo.png" alt="Coomeva EPS"></div>
-                <div class="partner-logo"><img src="img/nueva-eps-logo.png" alt="Nueva EPS"></div>
-                <div class="partner-logo">¡Y muchas más!</div>
+                <div class="partner-logo"><a href="https://www.saviasaludeps.com/sitioweb/" target="_blank" rel="noopener"><img src="img/savia.png" alt="Savia Salud EPS"></a></div>
+                <div class="partner-logo"><a href="https://promedanips.co/" target="_blank" rel="noopener"><img src="img/promedan.jpeg" alt="Promedan IPS"></a></div>
+                <div class="partner-logo"><a href="https://www.epssura.com/" target="_blank" rel="noopener"><img src="img/sura.jpg" alt="EPS Sura"></a></div>
+                <div class="partner-logo"><a href="https://www.coomeva.com.co/publicaciones/156993/plan-obligatorio-de-salud-eps/" target="_blank" rel="noopener"><img src="img/comevan.png" alt="Coomeva EPS"></a></div>
+                <div class="partner-logo"><a href="https://nuevaeps.com.co/" target="_blank" rel="noopener"><img src="img/nueva.png" alt="Nueva EPS"></a></div>
             </div>
         </section>
 
