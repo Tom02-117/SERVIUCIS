@@ -1,5 +1,5 @@
 /*=========================
-   1. ESTILOS GLOBALES Y RAÍZ
+   1. ESTILOS GLOBALES
    ========================= */
 * {
     margin: 0;
@@ -8,13 +8,15 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 :root {
-    /* Paleta para la nueva barra de navegación */
+    
+    
     --gov-blue: #1d70b8;
     --gov-white: #ffffff;
     --gov-text-dark: #0b0c0c;
     --gov-border-color: #b1b4b6;
     
-    /* Paleta original del sitio */
+
+    
     --color-light-gray: #f5f5f7;
     --color-dark-gray: #1d1d1f;
     --color-apple-blue: #0071e3;
@@ -42,7 +44,7 @@ img {
 }
 
 /* ====================================================
-   2. NUEVO HEADER Y BARRA DE NAVEGACIÓN (CORREGIDO)
+   2. HEADER Y BARRA DE NAVEGACIÓN
    ==================================================== */
 .site-header {
     background-color: var(--gov-blue);
@@ -154,7 +156,19 @@ img {
     margin: 0 auto;
     padding: 40px 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.nav-submenu-content {
+    max-width: 1280px;
+    padding: 40px 20px;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); grid-template-columns: 1fr 1fr;
+}
+
+.nav-submenu-content.three-columns {
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 .submenu-main-heading { 
@@ -173,13 +187,13 @@ img {
     margin-bottom: 1rem; 
 }
 .submenu-link { 
-    color: #555 !important; /* Gris medio */
+    color: #555 !important;
     font-size: 1.2rem; 
-    text-decoration: none !important; /* Sin subrayado */
+    text-decoration: none !important;
     transition: color 0.2s;
 }
 .submenu-link:hover { 
-    color: #222 !important; /* Más oscuro al pasar el mouse */
+    color: #222 !important; 
     text-decoration: none !important;
 }
 main {
@@ -194,7 +208,7 @@ main {
 }
 
 /* ==============================================================
-   3. INICIO DE ESTILOS ORIGINALES DEL SITIO
+   3. INICIO 
    ============================================================== */
 .hero {
     position: relative;
@@ -258,7 +272,7 @@ main {
 .carousel-bg-slide.active { opacity: 1; }
 
 /* =========================
-   4. SECCIONES DE CONTENIDO (SECCIÓN RESTAURADA)
+   4. SECCIONES DE CONTENIDO
    ========================= */
 .section-heading {
     text-align: center;
@@ -319,7 +333,7 @@ blockquote, .mission-statement {
    5. COMPONENTES
    ========================= */
 
-/* Botones (Estilo Unificado) */
+/* Botones */
 .btn,
 button,
 .product-tile-cta-link,
@@ -367,6 +381,7 @@ button:focus,
 }
 
 /* Tarjetas de Producto/Sede */
+
 .product-grid {
     max-width: 980px;
     margin: 0 auto;
@@ -482,7 +497,7 @@ button:focus,
 }
 
 .sede-container {
-  max-width: 350px; /* CORRECCIÓN: Usar max-width para flexibilidad */
+  max-width: 350px;
   width: 100%;
   margin: 40px auto;
   padding: 24px;
@@ -495,7 +510,7 @@ button:focus,
 }
 
 .sede-container.ampliado {
-  max-width: 700px; /* CORRECCIÓN: Usar max-width */
+  max-width: 700px; 
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 
@@ -512,7 +527,7 @@ button:focus,
   opacity: 1;
 }
 
-/* Formularios (Búsqueda y Contacto) */
+/* Formularios */
 .nav-search, .search-form { display: flex; align-items: center; }
 .search-form { width: 100%; }
 .search-input {
@@ -570,7 +585,7 @@ button:focus,
     min-height: 120px;
 }
 
-/* FAQ Interactivo */
+/* FAQ  */
 .faq-section {
   max-width: 900px;
   margin: 40px auto;
@@ -699,6 +714,8 @@ button:focus,
     margin: 0 auto;
 }
 .partner-logo {
+    max-width: 150px;
+    margin: 0 auto;
     font-weight: 600;
     color: #777;
     filter: grayscale(1);
@@ -902,7 +919,7 @@ button:focus,
         background-image: none !important;
     }
     
-    /* -- ESTILOS RESPONSIVOS ORIGINALES -- */
+    /* -- ESTILOS RESPONSIVOS  -- */
     .section-heading { font-size: 32px; }
     .hero-headline { font-size: 40px; }
     .hero-subhead { font-size: 21px; }
@@ -918,7 +935,7 @@ button:focus,
     .footer-links { grid-template-columns: 1fr; }
     .footer-legal-item { border-right: none; padding-right: 0; margin-right: 15px; }
 
-    /* Solo en los submenús: imagen arriba del texto en about-grid */
+    /* Solo en los submenús */
     .about-content .about-grid {
         grid-template-columns: 1fr;
     }
@@ -969,7 +986,7 @@ button:focus,
 
 
 .mobile-menu-header {
-    display: flex; /* Oculto en escritorio, visible en móvil */
+    display: flex; 
     justify-content: flex-end;
     padding: 10px 15px;
     background-color: var(--color-light-gray);
@@ -1003,7 +1020,7 @@ button:focus,
     }
 }
 
-/* PDF responsive en secciones tipo about-content */
+/* PDF responsive en secciones */
 @media (max-width: 1024px) {
     .about-content iframe[src$=".pdf"] {
         height: 400px !important;
