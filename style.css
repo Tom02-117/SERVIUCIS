@@ -142,26 +142,23 @@ img {
     visibility: visible;
     transform: translateY(0);
 }
+
+
+
+
+
+
 .nav-submenu-content {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 40px 20px;
-    display: grid;
-    gap: 40px;
+    padding: 20px 20px 80px 20px; /* Padding ajustado para móvil */
+    
+    /* --- ESTILO BASE (MOBILE FIRST): Una sola columna --- */
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Espacio vertical entre los bloques del menú en móvil */
 }
 
-.nav-submenu-content {
-    max-width: 1280px;
-    padding: 40px 20px;
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr); grid-template-columns: 1fr 1fr;
-}
-
-.nav-submenu-content.three-columns {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
 .submenu-main-heading { 
     font-size: 1.5rem; 
     font-weight: 700; 
@@ -170,23 +167,29 @@ img {
     border-bottom: 2px solid var(--gov-border-color); 
     padding-bottom: 0.75rem; 
 }
+
 .submenu-column ul { 
     list-style: none; 
     padding: 0; 
 }
+
 .submenu-column li { 
     margin-bottom: 1rem; 
 }
+
 .submenu-link { 
     color: #555 !important;
     font-size: 1.2rem; 
     text-decoration: none !important;
     transition: color 0.2s;
 }
+
 .submenu-link:hover { 
     color: #222 !important; 
     text-decoration: none !important;
 }
+
+
 main {
     padding-top: 71px;
     transition: filter 0.35s ease;
@@ -855,16 +858,15 @@ button:focus,
 }
 
 /* =========================
-   8. MEDIA QUERIES (CORREGIDO Y COMPLETO)
+   8. MEDIA QUERIES 
    ========================= */
 @media (max-width: 768px) {
     /* -- NAVEGACIÓN MÓVIL -- */
     .site-header {
-        /* En móvil, el header deja de ser fijo para una mejor experiencia de usuario */
-        position: static;
+        position: static; 
     }
     main {
-        padding-top: 0; /* Se elimina el padding superior ya que el header no es fijo */
+        padding-top: 0; 
     }
     .header-container {
         height: 60px;
@@ -874,40 +876,39 @@ button:focus,
         height: 32px;
     }
 
-    /* CORRECCIÓN: Estilos para AMBOS submenús en móvil */
-    .nav-submenu,
-    .search-submenu {
+    
+    .nav-submenu{
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        height: 100vh;
+        min-height: 100vh;
+        max-height: 100vh;
         background: var(--gov-white);
-        backdrop-filter: none; /* Sin blur en móvil para mejor rendimiento */
+        backdrop-filter: none;
         z-index: 10000;
-        transform: translateX(100%); /* Empieza fuera de la pantalla */
+        transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
         opacity: 1;
         visibility: visible;
-        overflow-y: auto; /* Permite scroll si el menú es largo */
+        overflow-y: auto;
+        border-bottom: none; 
     }
 
-    /* Mostrar el submenú activo */
-    .site-header.submenu-is-open .nav-submenu,
-    .site-header.search-is-open .search-submenu {
-        transform: translateX(0); /* Lo trae a la vista */
+
+    .site-header.submenu-is-open .nav-submenu {
+        transform: translateX(0); 
     }
     
-    /* Contenido de los submenús a 1 columna */
-    .nav-submenu-content,
-    .search-submenu-content {
+    .nav-submenu-content {
         grid-template-columns: 1fr;
         padding: 20px 20px 80px 20px;
     }
     
-    /* Desactivar el filtro de blur en main cuando un menú está abierto en móvil */
-    .site-header.submenu-is-open ~ main,
-    .site-header.search-is-open ~ main {
+   
+    .site-header.submenu-is-open ~ main {
         filter: none;
     }
 
@@ -1067,4 +1068,18 @@ button:focus,
         margin-bottom: 0 !important;
     }
 }
+@media (min-width: 769px) {
+    .nav-submenu-content {
+        
+        flex-direction: row; 
+        padding: 40px 20px;
+        gap: 40px; 
+    }
+
+    .submenu-column {
+        
+        flex: 1;
+    }
 }
+}
+
