@@ -151,28 +151,18 @@ img {
 }
 
 .nav-submenu-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 20px 20px 80px 20px; 
-
-  
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
 }
 
-.submenu-main-heading {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gov-text-dark);
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--gov-border-color);
-  padding-bottom: 0.75rem;
-}
-
-.submenu-column ul {
-  list-style: none;
-  padding: 0;
+.submenu-column {
+    flex: 1; 
 }
 
 .submenu-column li {
@@ -1006,10 +996,11 @@ button:focus,
     transform: translateX(0);
   }
 
-  .nav-submenu-content {
+.nav-submenu-content {
     grid-template-columns: 1fr;
+    gap: 35px;
     padding: 20px 20px 80px 20px;
-  }
+}
 
   .site-header.submenu-is-open ~ main {
     filter: none;
@@ -1215,15 +1206,5 @@ button:focus,
       margin-bottom: 0 !important;
     }
   }
-  @media (min-width: 769px) {
-    .nav-submenu-content {
-      flex-direction: row;
-      padding: 40px 20px;
-      gap: 40px;
-    }
 
-    .submenu-column {
-      flex: 1;
-    }
-  }
 }
