@@ -170,16 +170,17 @@ img {
 }
 
 .submenu-link {
+  margin-left: 3px;
   color: #555 !important;
   font-size: 1.2rem;
   text-decoration: none !important;
   transition: color 0.2s;
 }
-
 .submenu-link:hover {
   color: #222 !important;
   text-decoration: none !important;
 }
+
 
 main {
   font-size: inter(16px);
