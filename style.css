@@ -277,7 +277,7 @@ main {
     background-color: var(--color-light-gray);
 }
 .about-grid {
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -295,6 +295,7 @@ main {
     line-height: 1.65;
     color: #333;
     margin-bottom: 40px;
+    max-width: 1200px;
 }
 .text-column p:last-child {
     margin-bottom: 0;
