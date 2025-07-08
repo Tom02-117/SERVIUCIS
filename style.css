@@ -300,7 +300,8 @@ main {
     margin-bottom: 0;
 }
 .image-column img {
-    width: 100%;
+    margin: 10px;
+    width: 98%;
     height: auto;
     border-radius: var(--radius-global);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
