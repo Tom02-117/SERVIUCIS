@@ -169,6 +169,13 @@ img {
   margin-bottom: 1rem;
 }
 
+.submenu-main-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gov-blue);
+  margin-bottom: 10px;
+}
+
 .submenu-link {
   margin-left: 3px;
   color: #555 !important;
