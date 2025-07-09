@@ -375,6 +375,9 @@ main {
   gap: 80px;
   align-items: center;
 }
+
+
+
 .text-column h2 {
   font-size: 32px;
   font-weight: 600;
@@ -386,7 +389,7 @@ main {
   line-height: 1.65;
   color: #333;
   margin-bottom: 40px;
-  max-width: 1200px;
+  max-width: 2000px;
 }
 .text-column p:last-child {
   margin-bottom: 0;
@@ -817,7 +820,42 @@ button:focus,
 /* Grid para Misión y Visión (quienesSomos.html) */
 .mission-vision-grid {
   grid-template-columns: 1fr 1fr;
+  align-items: stretch; /* Hace que las tarjetas tengan la misma altura */
+  gap: 40px; /* Separación entre tarjetas */
 }
+
+/* Estilo de tarjeta para cada columna de Misión/Visión */
+.mission-vision-grid .text-column {
+  background-color: var(--gov-white);
+  padding: 40px;
+  border-radius: var(--radius-global);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajuste de la cita para que se vea bien dentro de la tarjeta */
+.mission-vision-grid .mission-statement {
+  background: transparent;
+  margin: 20px 0;
+  padding: 0 0 0 24px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.1rem;
+  flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+/* Ajuste para la imagen en la tarjeta de Visión */
+.mission-vision-grid .image-column {
+  margin-top: auto; /* Empuja la imagen al fondo de la tarjeta */
+  padding-top: 20px;
+}
+
+.mission-vision-grid .image-column img {
+  width: 100%;
+  margin: 0;
+}
+
 
 /* Sección de Valores (quienesSomos.html) */
 .values-section {
@@ -1050,7 +1088,8 @@ button:focus,
   .product-grid {
     grid-template-columns: 1fr;
   }
-  .about-content .about-grid {
+  .about-content .about-grid,
+  .mission-vision-grid {
     grid-template-columns: 1fr;
   }
   .about-content .image-column {
@@ -1113,6 +1152,11 @@ button:focus,
   .about-content .image-column {
     order: -1;
   }
+  
+  .mission-vision-grid .image-column {
+      order: 0; /* Restaura el orden en móvil */
+  }
+
 
   /* Botón de cerrar submenú en móvil */
   .nav-submenu-close {
