@@ -94,3 +94,25 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
+// --- back del Buzon  ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const formSuccess = urlParams.get('success');
+
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    if (formSuccess === 'true' && contactForm && successMessage) {
+        
+        contactForm.reset();
+
+        successMessage.style.display = 'block';
+
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+
+        window.history.replaceState(null, null, window.location.pathname);
+    }
+});
