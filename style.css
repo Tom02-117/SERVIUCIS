@@ -1082,12 +1082,11 @@ button:focus,
    8. MEDIA QUERIES 
    ========================= */
 @media (max-width: 768px) {
-  /* -- NAVEGACIÓN MÓVIL -- */
-  .site-header {
-    position: relative; 
-  }
+  /* -- NAVEGACIÓN MOVIL -- */
+  
+
   main {
-    padding-top: 0;
+    padding-top: 60px;
   }
   .header-container {
     height: 60px;
@@ -1121,17 +1120,17 @@ button:focus,
     transform: translateX(0);
   }
 
-.nav-submenu-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-    padding: 20px 20px 80px 20px;
-}
+  .nav-submenu-content {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      padding: 20px 20px 80px 20px;
+  }
 
   .site-header.submenu-is-open ~ main {
     filter: none;
   }
 
-  /* Botón de cierre para el menú principal móvil */
+  /* Botón de cierre para el menu principal movil */
   .mobile-menu-header {
     display: flex;
     justify-content: flex-end;
@@ -1236,7 +1235,7 @@ button:focus,
     margin-right: 15px;
   }
 
-
+  /* Solo en los submenus */
   .about-content .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1249,7 +1248,7 @@ button:focus,
   }
 
 
-  /* Botón de cerrar submenú en móvil */
+  /* boton de cerrar submenu en movil */
   .nav-submenu-close {
     display: block;
     background: none;
@@ -1351,5 +1350,4 @@ button:focus,
       margin-bottom: 0 !important;
     }
   }
-
 }
