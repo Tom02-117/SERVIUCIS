@@ -1,16 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- LÓGICA DEL MENÚ DE NAVEGACIÓN (DESKTOP Y MÓVIL) ---
+    // back de menu de navegacion (pc y movil)
     const menuToggle = document.getElementById('menu-toggle');
     const siteHeader = document.getElementById('site-header');
     const mobileMenuCheckbox = document.getElementById('mobile-menu-toggle');
     const mainContent = document.querySelector('main');
 
-    // Menú de escritorio
+    // menu de escritorio
     if (menuToggle && siteHeader) {
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evita que el click se propague al documento
+            e.stopPropagation(); 
             siteHeader.classList.toggle('submenu-is-open');
             if (mainContent) {
                 mainContent.style.filter = siteHeader.classList.contains('submenu-is-open') ? 'blur(5px)' : 'none';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Cerrar menú de escritorio si se hace clic fuera
+    // cerrar menu de escritorio si se hace clic fuera
     document.addEventListener('click', function(event) {
         if (siteHeader && siteHeader.classList.contains('submenu-is-open') && !siteHeader.contains(event.target)) {
             siteHeader.classList.remove('submenu-is-open');
@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Menú móvil (bloquear scroll del body cuando está abierto)
+    // bloquear scroll del body cuando el menu movil esta abierto
     if (mobileMenuCheckbox) {
         mobileMenuCheckbox.addEventListener('change', function() {
             document.body.classList.toggle('body-no-scroll', this.checked);
         });
     }
 
-    // --- LÓGICA DEL CARRUSEL DE IMÁGENES ---
+    // --- back del carrusel ---
     const carousels = document.querySelectorAll('.carousel, .background-carousel');
     carousels.forEach(carousel => {
         const slides = carousel.querySelectorAll('.carousel-slide, .carousel-bg-slide');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // --- LÓGICA PARA MOSTRAR/OCULTAR MAPAS EN SEDES ---
+    // --- back para mostrar y ocultar mapas ---
     const mapToggleButtons = document.querySelectorAll('.js-toggle-map');
     mapToggleButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -59,28 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    // --- LÓGICA PARA EL FAQ (PREGUNTAS FRECUENTES) - CORREGIDO ---
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const button = item.querySelector('.faq-question');
-        if (button) {
-            button.addEventListener('click', () => {
-                const wasOpen = item.classList.contains('open');
 
-                // Cierra todos los items que puedan estar abiertos
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('open');
-                });
-
-                // Si no estaba abierto, lo abre. Si estaba abierto, el paso anterior ya lo cerró.
-                if (!wasOpen) {
-                    item.classList.add('open');
-                }
-            });
-        }
-    });
-
-    // --- LÓGICA PARA EL FORMULARIO DE CONTACTO (BUZÓN) ---
+    // --- back del formulario (BUZON) ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
