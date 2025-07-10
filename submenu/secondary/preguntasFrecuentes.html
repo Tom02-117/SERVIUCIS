@@ -8,7 +8,7 @@
     <link rel="icon" href="../../img/logo unidCH.png" type="image/png">
 </head>
 <body>
-    <!--  menú móvil -->
+    <!--  menu movil -->
     <input type="checkbox" id="mobile-menu-toggle">
 
     <header class="site-header" id="site-header">
@@ -228,19 +228,19 @@
     </footer>
     
     <script src="../../js/main.js"></script>
-    <script>
-    // back del FAQ
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+<script>
+// back del FAQ
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-            const faqItem = button.closest('.faq-item');
-            if (faqItem) {
-                faqItem.classList.toggle('open');
-            }
-        });
+        const faqItem = button.closest('.faq-item');
+        if (faqItem) {
+            faqItem.classList.toggle('open');
+        }
     });
-    </script>
+});
+</script>
 </body>
 </html>
