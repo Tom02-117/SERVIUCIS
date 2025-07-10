@@ -42,7 +42,7 @@ img {
 }
 
 /* ====================================================
-   2. HEADER Y BARRA DE NAVEGACIÓN
+   2. HEADER Y BARRA DE NAVEGACION
    ==================================================== */
 .site-header {
 background: rgba(10, 156, 166, 0.75);
@@ -157,8 +157,6 @@ background: rgba(10, 156, 166, 0.75);
     max-width: 1280px;
     margin: 0 auto;
     padding: 40px 20px;
-    
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 40px; 
@@ -467,7 +465,7 @@ button:focus,
 }
 
 /* =========================
-   5.1 SECCIÓN PROMOCIONAL
+   5.1 SECCIÓN tipo PROMOCIONAL
    ========================= */
 .promo-section {
   margin-left: auto;
@@ -550,7 +548,7 @@ button:focus,
 }
 
 /* =========================
-   5.2 SECCIÓN SEDES (NUEVO DISEÑO)
+   5.2 SECCIÓN SEDES 
    ========================= */
 
 .sedes-section {
@@ -899,11 +897,11 @@ button:focus,
 /* Grid para Misión y Visión (quienesSomos.html) */
 .mission-vision-grid {
   grid-template-columns: 1fr 1fr;
-  align-items: stretch; /* Hace que las tarjetas tengan la misma altura */
-  gap: 40px; /* Separación entre tarjetas */
+  align-items: stretch; 
+  gap: 40px; 
 }
 
-/* Estilo de tarjeta para cada columna de Misión/Visión */
+/* Estilo de tarjeta para cada columna de Misión y Visión */
 .mission-vision-grid .text-column {
   background-color: var(--gov-white);
   padding: 40px;
@@ -913,7 +911,7 @@ button:focus,
   flex-direction: column;
 }
 
-/* Ajuste de la cita para que se vea bien dentro de la tarjeta */
+
 .mission-vision-grid .mission-statement {
   background: transparent;
   margin: 20px 0;
@@ -921,12 +919,12 @@ button:focus,
   border-radius: 0;
   box-shadow: none;
   font-size: 1.1rem;
-  flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+  flex-grow: 1; 
 }
 
 /* Ajuste para la imagen en la tarjeta de Visión */
 .mission-vision-grid .image-column {
-  margin-top: auto; /* Empuja la imagen al fondo de la tarjeta */
+  margin-top: auto; 
   padding-top: 20px;
 }
 
@@ -1086,7 +1084,7 @@ button:focus,
 @media (max-width: 768px) {
   /* -- NAVEGACIÓN MÓVIL -- */
   .site-header {
-    position: static;
+    position: relative; 
   }
   main {
     padding-top: 0;
@@ -1238,7 +1236,7 @@ button:focus,
     margin-right: 15px;
   }
 
-  /* Solo en los submenús */
+
   .about-content .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1247,7 +1245,7 @@ button:focus,
   }
   
   .mission-vision-grid .image-column {
-      order: 0; /* Restaura el orden en móvil */
+      order: 0; 
   }
 
 
