@@ -479,7 +479,7 @@ blockquote,
 .btn,
 .search-button,
 .faq-question {
-  background: linear-gradient(90deg, #0074d9 0%, #00c3e3 100%);
+  background: linear-gradient(90deg, #0a9ca6bf 0%, #0a9ca6bf 100%);
   color: #fff !important;
   border: none;
   border-radius: 25px;
@@ -503,7 +503,7 @@ blockquote,
 .btn:focus,
 .search-button:focus,
 .faq-question:focus {
-  background: linear-gradient(90deg, #005fa3 0%, #009bbd 100%);
+  background: linear-gradient(90deg, #0a9ca6bf 0%, #009bbd 100%);
   transform: translateY(-2px) scale(1.02);
   color: #fff !important;
   text-decoration: none;
@@ -852,7 +852,7 @@ blockquote,
 .faq-heading {
   text-align: center;
   margin-bottom: 32px;
-  color: #0074d9;
+  color: #0a0a0a;
 }
 .faq-list {
   display: flex;
@@ -868,7 +868,7 @@ blockquote,
 }
 .faq-item.open {
   box-shadow: 0 4px 16px rgba(0, 113, 227, 0.13);
-  border-color: #0074d9;
+  border-color: #72bdd4;
 }
 .faq-question {
   text-align: left;
