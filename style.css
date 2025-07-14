@@ -1058,7 +1058,7 @@ blockquote,
 
 .document-container {
   max-width: 900px;
-  margin: 0 auto;
+  max-height: 1200px;
   background-color: #fff;
   border-radius: var(--radius-global);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
