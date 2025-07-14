@@ -8,8 +8,9 @@
     <link rel="icon" href="../../img/logo unidCH.png" type="image/png">
 </head>
 <body>
-    <!--  menu movil -->
+    <!-- Menú móvil -->
     <input type="checkbox" id="mobile-menu-toggle">
+
     <header class="site-header" id="site-header">
         <div class="header-container">
             <a href="../../index.html" class="header-logo-link"> 
@@ -64,7 +65,6 @@
 
     <div class="mobile-nav-panel">
         <div class="nav-submenu-content three-columns">
-           
             <div class="submenu-column">
                 <h3 class="submenu-main-heading">Nosotros</h3>
                 <ul>
@@ -96,19 +96,12 @@
             </div>
         </div>
     </div>
-
-
-    </header>
-    <!-- =============================== -->
-    <!-- == HEADER == -->
-    <!-- =============================== -->
         
     <main>
         <section class="page-hero">
             <div class="background-carousel">
-                <div class="carousel-slide active"><img src="../../img/20250703_144330.jpg" alt=""></div>
-                <div class="carousel-slide"><img src="../../img/20250703_144458.jpg" alt=""></div>
-                <div class="carousel-slide"><img src="../../img/20250703_144915 (1).jpg" alt=""></div>
+                <div class="carousel-slide active"><img src="../../img/20250703_144330.jpg" alt="Instalaciones Serviucis"></div>
+                <div class="carousel-slide"><img src="../../img/20250703_144458.jpg" alt="Equipo médico de Serviucis"></div>
             </div>
             <div class="page-hero-content">
                 <h1 class="slide-up">Asuntos Económicos</h1>
@@ -116,54 +109,55 @@
             </div>
         </section>
 
-        <section class="about-content">
-            <div class="about-grid" style="grid-template-columns: 1fr;">
-                <div class="text-column">
-                    <h2>Estados Financieros</h2>
-                    <p>Consulte o descargue la guía para Estados Financieros:</p>
-                    <object data="../../pdf/estados_financieros_2024_2023.pdf" type="application/pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px;">
-                        <iframe src="../../pdf/estados_financieros_2024_2023.pdf" width="100%" height="600px" style="border:none;"></iframe>
-                        <p>Tu navegador no puede mostrar el PDF. <a href="../../pdf/estados_financieros_2024_2023.pdf" target="_blank">Descargar PDF</a></p>
-                    </object>
-                    <p style="margin-top:1em;">
-                        <a href="../../pdf/estados_financieros_2024_2023.pdf" target="_blank" class="btn">Descargar PDF</a>
-                    </p>
+        <section class="document-section">
+            <div class="document-container">
+                <!-- Pestañas para seleccionar el documento -->
+                <div class="document-tabs">
+                    <button class="tab-button active" data-target="financieros">Estados Financieros</button>
+                    <button class="tab-button" data-target="dictamen">Dictamen Revisor Fiscal</button>
+                    <button class="tab-button" data-target="gestion">Informe de Gestión</button>
+                </div>
+
+                <!-- Contenido para Estados Financieros -->
+                <div id="financieros" class="document-content active">
+                    <div class="document-header">
+                        <h2>Estados Financieros 2023-2024</h2>
+                        <div class="document-actions">
+                            <a href="../../pdf/estados_financieros_2024_2023.pdf" target="_blank" class="btn">Descargar PDF</a>
+                        </div>
+                    </div>
+                    <div class="document-viewer">
+                        <iframe src="../../pdf/estados_financieros_2024_2023.pdf" title="Estados Financieros"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contenido para Dictamen Revisor Fiscal -->
+                <div id="dictamen" class="document-content">
+                    <div class="document-header">
+                        <h2>Dictamen del Revisor Fiscal 2024</h2>
+                        <div class="document-actions">
+                            <a href="../../pdf/dictamen_serviucis_2024.pdf" target="_blank" class="btn">Descargar PDF</a>
+                        </div>
+                    </div>
+                    <div class="document-viewer">
+                        <iframe data-src="../../pdf/dictamen_serviucis_2024.pdf" title="Dictamen del Revisor Fiscal"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contenido para Informe de Gestión -->
+                <div id="gestion" class="document-content">
+                    <div class="document-header">
+                        <h2>Informe de Gestión 2024</h2>
+                        <div class="document-actions">
+                            <a href="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" target="_blank" class="btn">Descargar PDF</a>
+                        </div>
+                    </div>
+                    <div class="document-viewer">
+                        <iframe data-src="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" title="Informe de Gestión"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="about-content">
-            <div class="about-grid" style="grid-template-columns: 1fr;">
-                <div class="text-column">
-                    <h2>Dictamen del Revisor fiscal</h2>
-                    <p>Consulte o descargue la guía para el Dictamen del Revisor fiscal:</p>
-                    <object data="../../pdf/dictamen_serviucis_2024.pdf" type="application/pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px;">
-                        <iframe src="../../pdf/dictamen_serviucis_2024.pdf" width="100%" height="600px" style="border:none;"></iframe>
-                        <p>Tu navegador no puede mostrar el PDF. <a href="../../pdf/dictamen_serviucis_2024.pdf" target="_blank">Descargar PDF</a></p>
-                    </object>
-                    <p style="margin-top:1em;">
-                        <a href="../../pdf/dictamen_serviucis_2024.pdf" target="_blank" class="btn">Descargar PDF</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-                <section class="about-content">
-            <div class="about-grid" style="grid-template-columns: 1fr;">
-                <div class="text-column">
-                    <h2>Informe de gestión 2024</h2>
-                    <p>Consulte o descargue la guía para el Informe de gestión 2024:</p>
-                    <object data="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" type="application/pdf" width="100%" height="600px" style="border:1px solid #ccc; border-radius:8px;">
-                        <iframe src="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" width="100%" height="600px" style="border:none;"></iframe>
-                        <p>Tu navegador no puede mostrar el PDF. <a href="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" target="_blank">Descargar PDF</a></p>
-                    </object>
-                    <p style="margin-top:1em;">
-                        <a href="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" target="_blank" class="btn">Descargar PDF</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
     </main>
     
    <!-- Footer -->
@@ -191,7 +185,7 @@
                     <h3>Vigilado por la Superintendencia Nacional de Salud</h3>
                     <br>
                     <a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener">
-                        <img src="../../img/logo-vigilado-supersalud-web.png" alt="logo" style="max-width: 140px; height: auto; display: block; margin: 1em auto 0;">
+                        <img src="../../img/logo-vigilado-supersalud-web.png" alt="logo vigilado supersalud" style="max-width: 140px; height: auto; display: block; margin: 1em auto 0;">
                     </a>
                 </div>
             </div>
