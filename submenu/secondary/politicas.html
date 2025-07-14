@@ -183,20 +183,6 @@
     </footer>
 
     <script src="../../js/main.js"></script>
-    <script>
-        // back del FAQ
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                const faqItem = button.closest('.faq-item');
-                if (faqItem) {
-                    faqItem.classList.toggle('open');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
