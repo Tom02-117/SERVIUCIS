@@ -425,6 +425,7 @@ main {
   padding: 60px 20px 100px;
   background-color: var(--color-light-gray);
 }
+
 .about-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -451,25 +452,21 @@ main {
 }
 .image-column img {
   height: auto;
-  border-radius: var(--radius-global);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   display: block;
 }
 
 blockquote,
 .mission-statement {
   border-left: 5px solid var(--gov-blue);
-  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: #222;
   margin: 32px auto;
   padding: 24px 28px;
-  font-size: 1.2rem;
   line-height: 1.6;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
+
+
 .texto-principal {
   font-size: 14px !important;
 }
