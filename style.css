@@ -537,7 +537,7 @@ blockquote,
 }
 .promo-card--sedes {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
-    url("img/FACHADARENEW.jpg");
+    url("img/FACHADARENEW1.jpg");
 }
 .promo-card--pacientes {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
@@ -614,7 +614,7 @@ blockquote,
 }
 .sede-card--rionegro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-    url("img/FACHADARENEW.jpg");
+    url("img/FACHADARENEW1.jpg");
 }
 .sede-card--apartado {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
