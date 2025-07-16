@@ -229,7 +229,7 @@ img {
   transform: translateX(0);
 }
 
-/* Animación del ícono a X */
+/* Animación del icono a X */
 #mobile-menu-toggle:checked ~ .site-header .mobile-menu-icon .bar {
     background-color: var(--color-dark-gray);
 }
