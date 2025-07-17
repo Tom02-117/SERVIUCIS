@@ -144,11 +144,26 @@
                     ¡Gracias! Tu mensaje ha sido enviado correctamente.
                 </div>
                 <form id="contact-form" action="https://formspree.io/f/xblywbyn" method="POST">
+
+
                     <label for="name">Su Nombre:</label>
                     <input type="text" id="name" name="name" required>
 
                     <label for="email">Su Email:</label>
                     <input type="email" id="email" name="email" required>
+
+                    <label for="tipo-solicitud">Tipo de Solicitud:</label>
+                           <div class="select-wrapper">
+                        <select id="tipo-solicitud" name="tipo-solicitud" required>
+                                <option value="" disabled selected>Seleccione una opción...</option>
+                                <option value="Peticion">Petición</option>
+                                <option value="Queja">Queja</option>
+                                <option value="Reclamo">Reclamo</option>
+                                <option value="Sugerencia">Sugerencia</option>
+                                <option value="Felicitacion">Felicitación</option>
+                                <option value="Denuncia / Inquietud">Denuncia / Inquietud</option>
+                        </select>
+                    </div>
 
                     <label for="message">Su Mensaje:</label>
                     <textarea id="message" name="message" required></textarea>
