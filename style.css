@@ -826,7 +826,8 @@ blockquote,
 }
 .sugerencia-container input[type="text"],
 .sugerencia-container input[type="email"],
-.sugerencia-container textarea {
+.sugerencia-container textarea,
+.sugerencia-container select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -835,7 +836,27 @@ blockquote,
   font-size: 16px;
   margin-bottom: 20px;
   background-color: rgba(255,255,255,0.7);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
+.select-wrapper {
+  position: relative;
+  display: block;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 14px;
+  color: #555;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  pointer-events: none;
+}
+
+
 .sugerencia-container textarea {
   resize: vertical;
   min-height: 120px;
