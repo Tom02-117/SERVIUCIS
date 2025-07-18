@@ -476,7 +476,7 @@ blockquote,
 .btn,
 .search-button,
 .faq-question {
-  background: linear-gradient(90deg, #3ABAE6 0%, #0a9ca6bf 100%);
+  background: linear-gradient(90deg, #3ABAE6 0%, #3ABAE6 100%);
   color: #fff !important;
   border: none;
   border-radius: 25px;
@@ -500,7 +500,7 @@ blockquote,
 .btn:focus,
 .search-button:focus,
 .faq-question:focus {
-  background: linear-gradient(90deg, #3ABAE6 0%, #009bbd 100%);
+  background: linear-gradient(90deg, #3ABAE6 0%, #3ABAE6 100%);
   transform: translateY(-2px) scale(1.02);
   color: #fff !important;
   text-decoration: none;
