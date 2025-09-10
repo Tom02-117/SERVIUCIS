@@ -52,18 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-  // --- mapas ---
-  const mapToggleButtons = document.querySelectorAll(".js-toggle-map");
-  mapToggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const cardContainer = button.closest(".sede-card, .sede-info-card");
-      if (cardContainer) {
-        cardContainer.classList.toggle("map-is-open");
-        const isOpen = cardContainer.classList.contains("map-is-open");
-        button.textContent = isOpen ? "Ocultar mapa" : "Ver en mapa";
+// --- mapas ---
+const mapToggleButtons = document.querySelectorAll(".js-toggle-map");
+mapToggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const cardContainer = button.closest(".sede-card, .sede-info-card");
+    const gridContainer = button.closest(".about-grid");
+
+    if (cardContainer) {
+      cardContainer.classList.toggle("map-is-open");
+      const isOpen = cardContainer.classList.contains("map-is-open");
+      button.textContent = isOpen ? "Ocultar mapa" : "Ver en mapa";
+      
+      if (gridContainer) {
+          gridContainer.classList.toggle("is-expanded", isOpen);
       }
-    });
+    }
   });
+});
 
   // --- formularion ---
   const contactForm = document.getElementById("contact-form");
