@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mainContent) {
         mainContent.style.filter = siteHeader.classList.contains("submenu-is-open") ? "blur(5px)" : "none";
       }
-    });
+    });  
   }
 
   // cerrar menu de escritorio si se hace clic fuera
@@ -71,36 +71,60 @@ mapToggleButtons.forEach((button) => {
   });
 });
 
-  // --- formularion ---
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      const successMessage = document.getElementById("success-message");
 
-      fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { Accept: "application/json" },
-      })
-        .then((response) => {
-          if (response.ok) {
-            if (successMessage) successMessage.style.display = "block";
-            form.reset();
-            form.style.display = "none";
-          } else {
-            alert("Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.");
-          }
-        })
-        .catch((error) => {
-          alert("Hubo un error de red. Por favor, revisa tu conexión e intenta de nuevo.");
-        });
+
+// --- INTERSECTION OBSERVER PARA ANIMACIONES ON-SCROLL ---
+
+console.log("Observer script está corriendo!");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
     });
-  }
+});
 
-  // --- pestañas de economico ---
+const hiddenElements = document.querySelectorAll('.hidden');
+
+console.log("Elementos encontrados para animar:", hiddenElements);
+
+hiddenElements.forEach((el) => observer.observe(el));
+
+var form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
+  event.preventDefault(); 
+  var status = document.getElementById("success-message");
+  var data = new FormData(event.target);
+  
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "¡Gracias! Tu mensaje ha sido enviado correctamente.";
+      status.style.display = 'block'; 
+      form.reset();
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          alert(data["errors"].map(error => error["message"]).join(", "));
+        } else {
+          alert("Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.");
+        }
+      })
+    }
+  }).catch(error => {
+    alert("Hubo un error de red al enviar tu mensaje.");
+  });
+}
+form.addEventListener("submit", handleSubmit)
+
+  // --- pestañas de economico - tch---
   const tabsContainer = document.querySelector('.document-tabs');
   if (tabsContainer) {
     const tabs = tabsContainer.querySelectorAll('.tab-button');
