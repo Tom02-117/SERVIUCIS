@@ -7,6 +7,97 @@
     <title>Buzón PQRSD - Serviucis</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../img/logo unidCH.png" type="image/png">
+
+    <!-- Estilos añadidos: mejorar apariencia de los campos nuevos y formulario -->
+    <style>
+        .sugerencia-container {
+            padding: 1.2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .sugerencia-container form label {
+            display: block;
+            margin: 0.5rem 0 0.35rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .sugerencia-container form input[type="text"],
+        .sugerencia-container form input[type="email"],
+        .sugerencia-container form input[type="tel"],
+        .sugerencia-container form select {
+            width: 100%;
+            padding: 0.62rem 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            background: #fafafa;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper::after {
+            content: "▾";
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .sugerencia-container form input:focus,
+        .sugerencia-container form select:focus {
+            outline: none;
+            border-color: #2a9d8f;
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(42, 157, 143, 0.12);
+        }
+
+        /* Estilo específico para el campo 'puesto' */
+        #puesto {
+            text-transform: capitalize;
+        }
+
+        /* Botón */
+        .sugerencia-container .btn {
+            display: inline-block;
+            padding: 0.68rem 1rem;
+            border-radius: 8px;
+            background: #2a9d8f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 120ms ease, box-shadow 120ms ease, background 160ms ease;
+        }
+
+        .sugerencia-container .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(42, 157, 143, 0.12);
+            background: #238773;
+        }
+
+        /* Mensaje de éxito */
+        #success-message {
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .sugerencia-container {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -185,29 +276,35 @@
                 <div class="footer-links-column">
                     <h3>Contáctenos</h3>
                     <ul>
-                        <li><a href="mailto:atencionalusuario@serviucis.com">Correo: atencionalusuario@serviucis.com</a></li>
+                        <li><a href="mailto:atencionalusuario@serviucis.com">Correo: atencionalusuario@serviucis.com</a>
+                        </li>
                         <li>Línea de atención única: (604) 5661619</li>
                     </ul>
                 </div>
                 <div class="footer-links-column">
                     <h3>Síguenos</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/Serviucis/" target="_blank"><img src="../img/20673.png" alt="Facebook"> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/serviucissas/" target="_blank"><img src="../img/1a179ff9617a9bf05426d9170b164557.png" alt="Instagram"> Instagram</a></li>
+                        <li><a href="https://www.facebook.com/Serviucis/" target="_blank"><img src="../img/20673.png"
+                                    alt="Facebook"> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/serviucissas/" target="_blank"><img
+                                    src="../img/1a179ff9617a9bf05426d9170b164557.png" alt="Instagram"> Instagram</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links-column footer-supersalud">
                     <h3>Vigilado por la Superintendencia Nacional de Salud</h3>
                     <br>
                     <a href="https://www.supersalud.gov.co/" target="_blank" rel="noopener">
-                        <img src="../img/logo-vigilado-supersalud-web.png" alt="Logo " style="max-width: 140px; height: auto; display: block; margin: 1em auto 0;">
+                        <img src="../img/logo-vigilado-supersalud-web.png" alt="Logo "
+                            style="max-width: 140px; height: auto; display: block; margin: 1em auto 0;">
                     </a>
                 </div>
             </div>
             <div class="footer-legal">
                 <div class="footer-legal-item">© 2025 Serviucis S.A.S. Todos los derechos reservados.</div>
                 <div class="footer-legal-item"><a href="politicas.html">Política de Privacidad</a></div>
-                <div class="footer-legal-item"><a href="#">Desarrollado por Departamento de Sistemas serviucis S.A.S</a>
+                <div class="footer-legal-item"><a href="#">Desarrollado por Departamento de Sistemas serviucis S.A.S
+                    </a>
                 </div>
             </div>
         </div>
