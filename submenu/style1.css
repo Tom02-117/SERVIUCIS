@@ -1359,3 +1359,9 @@ blockquote.mission-statement {
     margin-bottom: 40px;
   }
 }
+
+
+.sugerencia-container textarea::placeholder {
+    color: #A9B4C2;
+    font-family: 'Poppins', sans-serif;
+}
