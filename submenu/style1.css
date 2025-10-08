@@ -1313,7 +1313,7 @@ blockquote.mission-statement {
   padding: 0 24px 80px;
 }
 .cta-box {
-  max-width: 900px;
+  max-width: 1150px;
   margin: 0 auto;
   background-color: var(--background-white);
   border-radius: var(--radius-global);
