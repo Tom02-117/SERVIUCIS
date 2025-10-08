@@ -4,18 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuCheckbox = document.getElementById("mobile-menu-toggle");
   const mainContent = document.querySelector("main");
 
-  // --- Manejo del Header y Menús ---
 
-  // Sombra en header al hacer scroll
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 30) {
-      siteHeader.classList.add("scrolled");
-    } else {
-      siteHeader.classList.remove("scrolled");
-    }
-  });
+  const isHomePage = document.body.querySelector('.hero') !== null;
 
-  // Menú de escritorio
+if (isHomePage) {
+
+    siteHeader.classList.add('home-header');
+    
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            siteHeader.classList.add("scrolled");
+        } else {
+            siteHeader.classList.remove("scrolled");
+        }
+    });
+} else {
+
+    siteHeader.classList.add("scrolled"); 
+    siteHeader.style.position = 'fixed'; 
+}
+
+
+
   if (menuToggle && siteHeader) {
     menuToggle.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -25,29 +35,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // Cerrar menú de escritorio al hacer clic fuera
+  
+  
   document.addEventListener("click", function (event) {
     if (
       siteHeader &&
-      siteHeader.classList.contains("submenu-is-open") &&
-      !siteHeader.contains(event.target)
+      site-header.classList.contains("submenu-is-open") &&
+      !site-header.contains(event.target)
     ) {
-      siteHeader.classList.remove("submenu-is-open");
+      site-header.classList.remove("submenu-is-open");
       if (mainContent) {
         mainContent.style.filter = "none";
       }
     }
   });
-
-  // Bloqueo de scroll para menú móvil
+  
   if (mobileMenuCheckbox) {
     mobileMenuCheckbox.addEventListener("change", function () {
       document.body.classList.toggle("body-no-scroll", this.checked);
     });
   }
 
-  // --- Carrusel de Imágenes ---
+
   const carousels = document.querySelectorAll(".carousel");
   carousels.forEach((carousel) => {
     const slides = carousel.querySelectorAll(".carousel-slide");
@@ -61,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // --- Desplegar Mapas en Sedes ---
   const mapToggleButtons = document.querySelectorAll(".js-toggle-map");
   mapToggleButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -74,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // --- Acordeón para Preguntas Frecuentes (FAQ) ---
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
       const questionButton = item.querySelector('.faq-question');
@@ -85,8 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-
-  // --- Animaciones al Hacer Scroll (Intersection Observer) ---
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -97,28 +102,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.1, // El elemento se animará cuando esté visible al 10%
+      threshold: 0.1,
     }
   );
-
   const hiddenElements = document.querySelectorAll(".hidden");
   hiddenElements.forEach((el) => observer.observe(el));
 
-  // --- Manejo de Formularios ---
+  
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
       contactForm.addEventListener("submit", async function(event) {
           event.preventDefault();
           const status = document.getElementById("success-message");
           const data = new FormData(event.target);
-
           try {
               const response = await fetch(event.target.action, {
                   method: contactForm.method,
                   body: data,
                   headers: { 'Accept': 'application/json' }
               });
-
               if (response.ok) {
                   if (status) {
                       status.textContent = "¡Gracias! Tu mensaje ha sido enviado correctamente.";
@@ -140,31 +142,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // --- Pestañas para Documentos (Asuntos Económicos) ---
   const tabsContainer = document.querySelector('.document-tabs');
   if (tabsContainer) {
     const tabs = tabsContainer.querySelectorAll('.tab-button');
     const contents = document.querySelectorAll('.document-content');
-
-    // Carga perezosa del primer iframe visible
     const initialActiveIframe = document.querySelector('.document-content.active iframe[data-src]');
     if (initialActiveIframe) {
         initialActiveIframe.setAttribute('src', initialActiveIframe.dataset.src);
     }
-
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const targetId = tab.dataset.target;
             const targetContent = document.getElementById(targetId);
-
             tabs.forEach(t => t.classList.remove('active'));
             contents.forEach(c => c.classList.remove('active'));
-            
             tab.classList.add('active');
             if (targetContent) {
                 targetContent.classList.add('active');
-
-                // Carga perezosa del iframe en la pestaña seleccionada
                 const iframe = targetContent.querySelector('iframe');
                 if (iframe && iframe.dataset.src && !iframe.getAttribute('src')) {
                     iframe.setAttribute('src', iframe.dataset.src);
