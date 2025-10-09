@@ -168,3 +168,36 @@ if (isHomePage) {
     });
   }
 });
+const docNavLinks = document.querySelectorAll('.doc-nav-link');
+const docContentSections = document.querySelectorAll('.document-content-section');
+
+const firstSection = document.querySelector('.document-content-section.active');
+if (firstSection) {
+    const firstIframe = firstSection.querySelector('iframe');
+    if (firstIframe && firstIframe.dataset.src && !firstIframe.getAttribute('src')) {
+        firstIframe.setAttribute('src', firstIframe.dataset.src);
+    }
+}
+
+docNavLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        const targetId = link.dataset.target;
+        const targetSection = document.getElementById(targetId);
+
+        docNavLinks.forEach(navLink => navLink.classList.remove('active'));
+        link.classList.add('active');
+
+        docContentSections.forEach(section => section.classList.remove('active'));
+        
+        if (targetSection) {
+            targetSection.classList.add('active');
+
+            const iframe = targetSection.querySelector('iframe');
+            if (iframe && iframe.dataset.src && !iframe.getAttribute('src')) {
+                iframe.setAttribute('src', iframe.dataset.src);
+            }
+        }
+    });
+});
