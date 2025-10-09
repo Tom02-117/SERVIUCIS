@@ -99,74 +99,58 @@
             </div>
         </div>
     </div>
-
     <main>
         <section class="page-hero">
             <div class="carousel">
-                <div class="carousel-slide active">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="../../img/FACHADARENEW1.1.jpg">
-                        <img src="../../img/FACHADARENEW2.jpg" alt="">
-                    </picture>
-                </div>
-                <div class="carousel-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="../../img/LETREROPLANO1.1.jpg">
-                        <img src="../../img/LETREROPLANO1.jpg" alt="">
-                    </picture>
-                </div>
-                <div class="carousel-slide">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="../../img/MONITOREO1.1.jpg">
-                        <img src="../../img/MONITOREO1.jpg" alt="">
-                    </picture>
-                </div>
+                <div class="carousel-slide active"><img src="../../img/FACHADARENEW2.jpg" alt="Fachada de Serviucis"></div>
+                <div class="carousel-slide"><img src="../../img/MONITOREO1.jpg" alt="Equipo de monitoreo UCI"></div>
             </div>
             <div class="page-hero-content">
-                <h1 class="slide-up">Asuntos Económicos</h1>
-                <p class="hero-subhead slide-up">Transparencia y compromiso con la sostenibilidad del sistema de salud.
-                </p>
+                <h1 class="slide-up">Portal de Transparencia</h1>
+                <p class="hero-subhead slide-up">Consulta nuestros informes corporativos. Un reflejo de nuestro compromiso con la buena gobernanza y la sostenibilidad.</p>
             </div>
         </section>
 
-        <section class="document-section">
-            <div class="document-container">
-                <div class="document-tabs">
-                    <button class="tab-button active" data-target="financieros">Estados Financieros</button>
-                    <button class="tab-button" data-target="dictamen">Dictamen Revisor Fiscal</button>
-                    <button class="tab-button" data-target="gestion">Informe de Gestión</button>
-                </div>
+        <div class="document-portal-container">
+            <!-- Menú Lateral -->
+            <aside class="document-nav">
+                <h3>Informes Corporativos</h3>
+                <ul>
+                    <li><a href="#financieros" class="doc-nav-link active" data-target="content-financieros">Estados Financieros</a></li>
+                    <li><a href="#dictamen" class="doc-nav-link" data-target="content-dictamen">Dictamen Revisor Fiscal</a></li>
+                    <li><a href="#gestion" class="doc-nav-link" data-target="content-gestion">Informe de Gestión</a></li>
+                </ul>
+            </aside>
 
-                <div id="financieros" class="document-content active">
+            <div class="document-content-area">
+                <section id="content-financieros" class="document-content-section active">
                     <div class="document-header">
-                        <h2>Estados Financieros 2023-2024</h2>
+                        <h2>Estados Financieros</h2>
                     </div>
-                    <div class="document-viewer">
-                        <iframe src="../../pdf/estados_financieros_2024_2023.pdf" title="Estados Financieros"></iframe>
+                    <div class="document-viewer-wrapper">
+                        <iframe data-src="../../pdf/estados_financieros_2024_2023.pdf" title="Estados Financieros"></iframe>
                     </div>
-                </div>
+                </section>
 
-                <div id="dictamen" class="document-content">
+                <section id="content-dictamen" class="document-content-section">
                     <div class="document-header">
-                        <h2>Dictamen del Revisor Fiscal 2024</h2>
+                        <h2>Dictamen del Revisor Fiscal</h2>
                     </div>
-                    <div class="document-viewer">
-                        <iframe data-src="../../pdf/dictamen_serviucis_2024.pdf"
-                            title="Dictamen del Revisor Fiscal"></iframe>
+                    <div class="document-viewer-wrapper">
+                        <iframe data-src="../../pdf/dictamen_serviucis_2024.pdf" title="Dictamen del Revisor Fiscal"></iframe>
                     </div>
-                </div>
+                </section>
 
-                <div id="gestion" class="document-content">
+                <section id="content-gestion" class="document-content-section">
                     <div class="document-header">
-                        <h2>Informe de Gestión 2024</h2>
+                        <h2>Informe de Gestión</h2>
                     </div>
-                    <div class="document-viewer">
-                        <iframe data-src="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf"
-                            title="Informe de Gestión"></iframe>
+                    <div class="document-viewer-wrapper">
+                        <iframe data-src="../../pdf/informe_de_gestion_serviucis_sas_2024.pdf" title="Informe de Gestión"></iframe>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
