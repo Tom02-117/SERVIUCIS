@@ -96,7 +96,7 @@ img {
 
 .site-header {
   background: rgba(39, 147, 151, 0.7);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(16px);
   position: fixed;
   top: 0;
@@ -117,7 +117,6 @@ img {
   justify-content: space-between;
   align-items: stretch;
   height: 70px;
-  
 }
 
 .header-logo-link {
@@ -136,7 +135,7 @@ img {
 
 .menu-toggle-button {
   background: transparent;
-  color: white;
+  color: var(--text-dark);
   border: none;
   font-size: 1rem;
   font-weight: 500;
@@ -421,7 +420,7 @@ img {
   position: relative;
   overflow: hidden;
   padding: 120px 24px 80px;
-  min-height: 600px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1198,12 +1197,11 @@ blockquote.mission-statement {
 
 
 .home-header:not(.scrolled) .nav-submenu {
-    background-color: rgba(60, 70, 80, 0.5);
+    background-color: rgba(60, 70, 80, 0.5); 
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-color: rgba(60, 70, 80, 0.5);
 }
-
 
 .home-header:not(.scrolled) .submenu-main-heading {
     color: var(--secondary-color); 
@@ -1243,241 +1241,4 @@ blockquote.mission-statement {
 
 .sugerencia-container input[type="file"]::file-selector-button:hover {
     background-color: var(--primary-dark);
-}
-
-
-/*================================================================
-  ESTILOS AVANZADOS PARA PÁGINA DE FAQ
-  ================================================================*/
-
-.faq-page-container {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 250px 1fr; 
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.faq-categories {
-  position: sticky;
-  top: 100px; 
-}
-
-.faq-categories h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary-color);
-}
-
-.faq-categories ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.faq-categories a {
-  display: block;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-light);
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.faq-categories a:hover {
-  background-color: #E7F5F6;
-  color: var(--primary-dark);
-}
-
-.faq-category-section {
-  margin-bottom: 60px;
-}
-.faq-category-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-}
-
-
-.cta-box-section {
-  padding: 0 24px 80px;
-}
-.cta-box {
-  max-width: 1150px;
-  margin: 0 auto;
-  background-color: var(--background-white);
-  border-radius: var(--radius-global);
-  padding: 50px;
-  text-align: center;
-  box-shadow: var(--shadow-md);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-.cta-box-icon {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  color: white;
-}
-.cta-box-icon svg {
-  width: 30px;
-  height: 30px;
-}
-.cta-box h3 {
-  font-size: 1.5rem;
-  color: var(--text-dark);
-}
-.cta-box p {
-  color: var(--text-light);
-  max-width: 500px;
-  line-height: 1.7;
-}
-
-
-@media (max-width: 900px) {
-  .faq-page-container {
-    grid-template-columns: 1fr; 
-  }
-  .faq-categories {
-    position: static; 
-    margin-bottom: 40px;
-  }
-}
-
-
-.sugerencia-container textarea::placeholder {
-    color: #A9B4C2;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-/*================================================================
-  ESTILOS PARA PORTAL DE TRANSPARENCIA (ASUNTOS ECONÓMICOS)
-  ================================================================*/
-.document-portal-container {
-  max-width: 1400px; 
-  margin: 80px auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 60px;
-  align-items: flex-start;
-}
-
-.document-nav {
-  position: sticky;
-  top: 100px;
-}
-.document-nav h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary-color);
-}
-.document-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.doc-nav-link {
-  display: block;
-  padding: 12px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  color: var(--text-light);
-  transition: background-color 0.2s ease, color 0.2s ease;
-  border: 1px solid transparent;
-}
-.doc-nav-link:hover {
-  background-color: #E7F5F6;
-  color: var(--primary-dark);
-}
-.doc-nav-link.active {
-  color: var(--primary-dark);
-  background-color: var(--background-white);
-  border-color: var(--border-color);
-  box-shadow: var(--shadow-sm);
-}
-
-.document-content-area {
-  padding-left: 60px;
-  border-left: 1px solid var(--border-color);
-}
-.document-content-section {
-  display: none; 
-  animation: fadeIn 0.4s ease;
-}
-.document-content-section.active {
-  display: block;
-}
-.document-content-section .document-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-color);
-}
-.document-content-section h2 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-.document-viewer-wrapper {
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-global);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-.document-viewer-wrapper iframe {
-  width: 100%;
-  height: 800px; 
-  border: none;
-}
-
-.document-content-section .btn-download {
-    background-color: var(--background-light);
-    color: var(--primary-dark) !important;
-    border: 1px solid var(--border-color);
-    box-shadow: none;
-}
-.document-content-section .btn-download:hover {
-    background-color: #E7F5F6;
-    border-color: #A9D9E3;
-    box-shadow: none;
-}
-
-@media (max-width: 992px) {
-  .document-portal-container {
-    grid-template-columns: 1fr;
-  }
-  .document-nav {
-    position: static; 
-    margin-bottom: 40px;
-  }
-  .document-content-area {
-    padding-left: 0;
-    border-left: none;
-  }
 }
