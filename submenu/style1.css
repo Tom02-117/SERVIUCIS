@@ -1365,3 +1365,119 @@ blockquote.mission-statement {
     color: #A9B4C2;
     font-family: 'Poppins', sans-serif;
 }
+
+
+/*================================================================
+  ESTILOS PARA PORTAL DE TRANSPARENCIA (ASUNTOS ECONÓMICOS)
+  ================================================================*/
+.document-portal-container {
+  max-width: 1400px; 
+  margin: 80px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.document-nav {
+  position: sticky;
+  top: 100px;
+}
+.document-nav h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+.document-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.doc-nav-link {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid transparent;
+}
+.doc-nav-link:hover {
+  background-color: #E7F5F6;
+  color: var(--primary-dark);
+}
+.doc-nav-link.active {
+  color: var(--primary-dark);
+  background-color: var(--background-white);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.document-content-area {
+  padding-left: 60px;
+  border-left: 1px solid var(--border-color);
+}
+.document-content-section {
+  display: none; 
+  animation: fadeIn 0.4s ease;
+}
+.document-content-section.active {
+  display: block;
+}
+.document-content-section .document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.document-content-section h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+.document-viewer-wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-global);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.document-viewer-wrapper iframe {
+  width: 100%;
+  height: 800px; 
+  border: none;
+}
+
+.document-content-section .btn-download {
+    background-color: var(--background-light);
+    color: var(--primary-dark) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+.document-content-section .btn-download:hover {
+    background-color: #E7F5F6;
+    border-color: #A9D9E3;
+    box-shadow: none;
+}
+
+@media (max-width: 992px) {
+  .document-portal-container {
+    grid-template-columns: 1fr;
+  }
+  .document-nav {
+    position: static; 
+    margin-bottom: 40px;
+  }
+  .document-content-area {
+    padding-left: 0;
+    border-left: none;
+  }
+}
