@@ -1466,6 +1466,10 @@ blockquote.mission-statement {
     background-color: #E7F5F6;
     border-color: #A9D9E3;
     box-shadow: none;
+
+
+
+    
 }
 
 @media (max-width: 992px) {
@@ -1481,3 +1485,4 @@ blockquote.mission-statement {
     border-left: none;
   }
 }
+
